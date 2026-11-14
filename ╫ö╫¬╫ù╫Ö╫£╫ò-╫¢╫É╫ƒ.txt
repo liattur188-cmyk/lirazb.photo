@@ -1,0 +1,12 @@
+לירז בוחניק — קובצי אתר מעודכנים ל-Cloudflare Pages
+
+1. חלצי את ה-ZIP במחשב.
+2. היכנסי למאגר: https://github.com/liattur188-cmyk/lirazb.photo
+3. במאגר קיימים כעת קובצי PHP מגרסה ישנה. מומלץ לגבות את התוכן הדרוש מהם ולהסיר אותם לפני פרסום האתר. במיוחד אין להשאיר config.php ציבורי אם הוא מכיל סודות.
+4. העלי את *תוכן* התיקייה הזאת למאגר, כך ש-index.html ו-scripts/build.js יהיו בשורש המאגר (לא בתיקיית אב נוספת).
+5. הקפידי להעלות גם את הקובץ .pages.yml (קובץ מוסתר).
+6. הגדרות Cloudflare: Framework preset=None, Build command=node scripts/build.js, Output=dist, Root directory ריק.
+7. אחרי Commit ב-GitHub, Cloudflare אמור לפרסם אוטומטית.
+8. אחרי פרסום: התחברי ל-https://app.pagescms.org וחברי את המאגר לניהול גלריות.
+
+הערה חשובה: האתר כולל גלריות להדגמה, ללא תמונות ותכני קשר סופיים. יש להעלות תמונות ולמלא מספר טלפון/אימייל דרך CMS.

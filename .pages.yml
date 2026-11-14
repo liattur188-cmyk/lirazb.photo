@@ -1,0 +1,53 @@
+media:
+  input: media
+  output: /media
+  rename: safe
+  categories: [image]
+content:
+  - name: site
+    label: הגדרות האתר והתוכן
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - { name: brand, label: שם העסק, type: string }
+      - { name: profession, label: תיאור העסק, type: string }
+      - { name: eyebrow, label: שורת כותרת קטנה, type: string }
+      - { name: headline, label: כותרת ראשית, type: string }
+      - { name: intro, label: טקסט ראשי, type: text }
+      - { name: hero_image, label: תמונה ראשית, type: image }
+      - { name: about_title, label: כותרת אודות, type: string }
+      - { name: about, label: טקסט אודות, type: text }
+      - { name: about_image, label: תמונה לאודות, type: image }
+      - { name: contact_title, label: כותרת יצירת קשר, type: string }
+      - { name: contact_text, label: טקסט יצירת קשר, type: text }
+      - { name: phone, label: טלפון, type: string }
+      - { name: email, label: אימייל לקבלת פניות, type: string }
+      - { name: instagram, label: קישור לאינסטגרם, type: string }
+      - { name: whatsapp, label: מספר וואטסאפ עם קידומת 972, type: string }
+      - { name: location, label: מיקום/אזור פעילות, type: string }
+      - { name: footer, label: שורה בתחתית האתר, type: string }
+  - name: galleries
+    label: גלריות צילום
+    type: collection
+    path: content/galleries
+    format: json
+    filename: "{primary}.json"
+    view:
+      primary: title
+      fields: [title, category, published]
+      sort: order
+      order: asc
+    fields:
+      - { name: title, label: שם הגלריה, type: string, required: true }
+      - { name: subtitle, label: תיאור קצר, type: string }
+      - { name: category, label: קטגוריה, type: string }
+      - { name: cover, label: תמונת שער, type: image }
+      - name: images
+        label: תמונות הגלריה
+        type: image
+        options:
+          multiple: true
+          unique: true
+      - { name: published, label: להציג באתר, type: boolean, default: true }
+      - { name: order, label: סדר תצוגה, type: number }
