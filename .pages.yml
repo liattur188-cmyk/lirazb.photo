@@ -26,6 +26,14 @@ content:
       - { name: instagram, label: קישור לאינסטגרם, type: string }
       - { name: whatsapp, label: מספר וואטסאפ עם קידומת 972, type: string }
       - { name: location, label: מיקום/אזור פעילות, type: string }
+      - name: available_dates
+        label: תאריכים פנויים לצילום
+        description: הוסיפי תאריכים פנויים בלוח השנה. להסרת זמינות מחקי את התאריך ושמרי. רק תאריכים ברשימה יוצגו כפנויים באתר; בקשות תיאום אינן סוגרות תאריך אוטומטית.
+        type: date
+        list: true
+        default: []
+        options:
+          format: yyyy-MM-dd
       - { name: footer, label: שורה בתחתית האתר, type: string }
   - name: galleries
     label: גלריות צילום
